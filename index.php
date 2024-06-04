@@ -3,25 +3,24 @@
 
 include "conexao.php";
 include "cidadao.php";
-$nis = 0;
+
 $id = 0;
 
 if(empty($_GET['action'])){
     $action = 'insert_banco';
     $actionv = 'Cadastrar';
-}else{
-    $action = $_GET['action'];
-    $actionv = 'Pesquisar';
-    //$nis = $_GET['nis'];
 }
 
+
 $dados_cidadao = new cidadao($connection);
+
 
 if(empty($_GET['page'])){
     $page = 0;
 }else{
     $page = $_GET['page'];
 }
+
 $tabela = $dados_cidadao->ler_tabela($page);
 $demp = $dados_cidadao->ler_linha($id);
 
@@ -32,6 +31,9 @@ if(empty($demp)){
     $demp[0]['NIS'] = '';
 
 }
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang = "pt-br">
@@ -39,7 +41,7 @@ if(empty($demp)){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cientec</title>
+    <title>Cientec Desafio</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>    
 </head>
 
@@ -57,12 +59,20 @@ if(empty($demp)){
         
         <?php
             if($actionv == 'Cadastrar'){
-                echo("<button type='submit'> Cadastro Cidadao</button>");
+                echo("<button type='submit'> Cadastrar Cidadão</button>");
             }
+
         ?>
+
+    </form>
+    <form id = "formulario" method="post" action="pesquisa.php">
+        <label for="nis_digitado">NIS para pesquisar: </label>
+        <input type="text" id="nis_digitado" name="nis_digitado">
+        <button type='submit'>Pesquisar</button>
     </form>
 
 </div>
+
 <br>
 
 <section id="resultado">

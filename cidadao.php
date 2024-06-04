@@ -18,8 +18,7 @@
             $primeiro_digito = rand(1,9);
             $restantes = rand(1000000000, 9999999999);
 
-            $nis_gerado = $primeiro_digito . str_pad($restantes,10,"0", STR_PAD_LEFT);
-            
+            $nis_gerado = $primeiro_digito . str_pad($restantes,10, "0", STR_PAD_LEFT);
             $nis = $nis_gerado;
             return $nis;
         }
@@ -28,7 +27,7 @@
             $post['nis'] = $this->gera_NIS();
             $insert_bd = "INSERT INTO usuarios(nome,NIS) VALUES ('{$post['nome_cidadao']}', '{$post['nis']}')";
             if($this->connection->query($insert_bd) === TRUE){
-                echo "Dados inseridos com sucesso!!!"."<br>";
+                echo "Dados inseridos com sucesso: $insert_bd<br>".$this->connection->query."<br>";
                 return true;
             }else{
                 echo "Erro ao inserir no banco: $insert_bd<br>".$this->connection->error."<br>";
@@ -46,8 +45,12 @@
             return $resultado->fetch_all(MYSQLI_ASSOC);
         }
         public function pesquisa_cidadao($nis){
-            $seleciona_linha = "SELECT * FROM usuarios WHERE nis = $nis";
-            $resultado = $this->connection_query($seleciona_linha);
+            $seleciona_linha = "SELECT nome,NIS FROM usuarios WHERE nis = $nis LIMIT 1";
+            $resultado = $this->connection->query($seleciona_linha);
+            if($this->connection->query($seleciona_linha) === FALSE){
+                echo "Cidadao nao achado.";
+                return false;
+            }
             return $resultado->fetch_all(MYSQLI_ASSOC);
         }
         

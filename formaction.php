@@ -14,9 +14,6 @@ $dados_cidadao = new cidadao($connection);
 if($action == 'insert_banco'){
     $dados_cidadao->insert_banco($_POST);
 }
-if($action == 'pesquisa_nis'){
-    $dados_cidadao->pesquisa_cidadao($_POST);
-}
 
 header('Location: index.php');
 ?>
