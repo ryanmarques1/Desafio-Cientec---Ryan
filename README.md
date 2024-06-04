@@ -4,7 +4,7 @@ Para conseguir executar:
 
 1º: 
   - Baixe o xammp: https://www.apachefriends.org/pt_br/download.html
-  - Deixe as configurações padrões (Servidor: localhost, username: root, password: '')
+  - Deixe as configurações padrões (Servidor: localhost, username: root, password:" ")
   - Baixando e Instalando como de praxte, execute como administrador
   - Ligue o Apache e MySql
   - Clique em admin na linha "MySql"
