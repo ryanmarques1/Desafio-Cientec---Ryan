@@ -1,4 +1,5 @@
 <?php
+    //Processo de criar conexão utilizando mysqli.
     $server_name = "localhost";
     $user_name = "root";
     $psswd = "";
