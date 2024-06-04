@@ -1,6 +1,9 @@
 <?php
+//Aqui temos a ação do formulário.
 include "cidadao.php";
 include "conexao.php";
+
+$dados_cidadao = new cidadao($connection);
 
 if(empty($_POST['action'])){
     $action = $_GET['action'];
@@ -9,10 +12,10 @@ if(empty($_POST['action'])){
 }else{
     $action = $_POST['action'];
 }
-$dados_cidadao = new cidadao($connection);
 
 if($action == 'insert_banco'){
-    $dados_cidadao->insert_banco($_POST);
+    $dados_cidadao->insert_banco($_POST); //Inserindo usando função da classe cidadao
+    
 }
 
 header('Location: index.php');

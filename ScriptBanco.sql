@@ -1,3 +1,7 @@
+--Execute no phpMyAdmin
+
+CREATE DATABASE cadastro_nis;
+
 CREATE TABLE usuarios(
     id SERIAL PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,

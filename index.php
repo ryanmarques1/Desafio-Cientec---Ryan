@@ -1,8 +1,10 @@
 <?php
 //Desafio Cientec - Ryan Marques de Castro
-
+//MAIN PRINCIPAL .c
 include "conexao.php";
 include "cidadao.php";
+
+
 
 $id = 0;
 
@@ -10,9 +12,7 @@ if(empty($_GET['action'])){
     $action = 'insert_banco';
     $actionv = 'Cadastrar';
 }
-
-
-$dados_cidadao = new cidadao($connection);
+$dados_cidadao = new cidadao($connection); //Objeto da classe
 
 
 if(empty($_GET['page'])){
@@ -21,19 +21,19 @@ if(empty($_GET['page'])){
     $page = $_GET['page'];
 }
 
+//Var tabela recebe a tabela do BD. Var demp recebe linha baseada no $id.
 $tabela = $dados_cidadao->ler_tabela($page);
 $demp = $dados_cidadao->ler_linha($id);
 
 
+//Atribuindo vazio caso não tiver ninguem no BD.
 if(empty($demp)){
     $demp[0]['id'] = '';
     $demp[0]['nome'] = '';
     $demp[0]['NIS'] = '';
-
 }
 
-
-
+$id = $id + 1;
 ?>
 <!DOCTYPE html>
 <html lang = "pt-br">
@@ -48,7 +48,8 @@ if(empty($demp)){
 <body>
 <div id="container">
     <h1>Cadastro de usuários NIS</h1>
-    <form id="formulario" method = "post" action="formaction.php">
+    <!-- Form para adicionar cidadões-->
+    <form class = "formulario" method = "post" action="formaction.php">
 
         <input type="hidden" name="id" id="id" value="<?php echo $demp[0]['id']; ?>">
         <input type="hidden" name="action" value="<?php echo $action;?>">
@@ -59,16 +60,17 @@ if(empty($demp)){
         
         <?php
             if($actionv == 'Cadastrar'){
-                echo("<button type='submit'> Cadastrar Cidadão</button>");
+                echo("<button type='submit'>Cadastrar Cidadão</button>");
             }
 
         ?>
 
     </form>
-    <form id = "formulario" method="post" action="pesquisa.php">
-        <label for="nis_digitado">NIS para pesquisar: </label>
+    <!-- Form para pesquisa por NIS-->
+    <form class = "formulario" method="post" action="pesquisa.php">
+        <label for="nis_digitado">Digite o NIS para pesquisar: </label>
         <input type="text" id="nis_digitado" name="nis_digitado">
-        <button type='submit'>Pesquisar</button>
+        <button type='submit'>Pesquisar Cidadão</button>
     </form>
 
 </div>
@@ -76,6 +78,7 @@ if(empty($demp)){
 <br>
 
 <section id="resultado">
+    
     <table>
         <tr>
             <th>ID</th>
@@ -83,14 +86,18 @@ if(empty($demp)){
             <th>NIS</th>
         </tr>
         <?php
-            foreach($tabela as $i){
+            if($tabela){
+                echo ("<h4>Cidadão com o NIS <u>{$tabela[0]['NIS']}</u> adicionado com sucesso!.</h4>");
                 echo("
                     <tr>
-                    <td>{$i['id']}</td>
-                    <td>{$i['nome']}</td>
-                    <td>{$i['NIS']}</td>
+                    <td>{$tabela[0]['id']}</td>
+                    <td>{$tabela[0]['nome']}</td>
+                    <td>{$tabela[0]['NIS']}</td>
                     ");
+            }else{
+                echo("<h4>Nenhum cidadão encontrado!</h4>");
             }
+
         ?>
     </table>
 </section>

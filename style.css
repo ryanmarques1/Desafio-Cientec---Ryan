@@ -1,21 +1,21 @@
+/*Estilização da aplicação.*/
 *{
     margin: 0;
 
 }
 #container{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
- 
-h1{
-    text-align: center;
-    font-size: 30px;
-    margin-top: 30px;
-}
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} 
 #formulario{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
 }
 
 label{
@@ -40,7 +40,6 @@ input{
     border-radius: 5px;
     padding: 5;
     font-size: 15px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: 2px solid rgb(157, 151, 151);
 }
 
