@@ -8,6 +8,9 @@ Para conseguir executar:
   - Baixando e Instalando como de praxte, execute como administrador
   - Ligue o Apache e MySql
   - Clique em admin na linha "MySql"
+  - Deve ficar assim
+    ![image](https://github.com/ryanmarques1/Desafio-Cientec---Ryan/assets/47296650/f01e03f1-7abe-4f1a-8fa3-89f0f9258d1d)
+
 
 2º:
   - Com o download do projeto feito, copie a pasta e acesse a pasta do xamp no disco onde ele foi instalado.
@@ -23,3 +26,5 @@ Para conseguir executar:
 
 
 OBS: Se caso o localhost ir para a dashboard, digite no seu navegador: "localhost/NomeDaPastaDoProjeto"
+![image](https://github.com/ryanmarques1/Desafio-Cientec---Ryan/assets/47296650/13e343b8-eab7-4c3e-92be-6ff294cd19eb)
+
