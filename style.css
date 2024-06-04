@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+
+}
+#container{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+#formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+label{
+    margin-bottom: 10px;
+}
+button{
+    margin-top: 20px;
+    background-color: rgb(93, 28, 28);
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 15;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform .5s;
+}
+button:hover{
+    transform: scale(.8);
+}
+
+input{
+    border-radius: 5px;
+    padding: 5;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid rgb(157, 151, 151);
+}
+
+/* Estilização da tabelação*/
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th{
+    background-color: rgb(200, 67, 67);
+    color: black;
+
+}
+tr{
+    background-color: rgb(149, 89, 11);
+}

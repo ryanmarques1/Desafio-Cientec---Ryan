@@ -1,0 +1,5 @@
+CREATE TABLE usuarios(
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    NIS INTEGER(11) NOT NULL
+);
