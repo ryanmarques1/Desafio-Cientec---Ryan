@@ -14,6 +14,8 @@ Para conseguir executar:
 
 2º:
   - Com o download do projeto feito, copie a pasta e acesse a pasta do xamp no disco onde ele foi instalado.
+    ![image](https://github.com/ryanmarques1/Desafio-Cientec---Ryan/assets/47296650/6dc6b25b-b401-42b1-ad25-e0684996f494)
+
   - Cole a pasta do projeto dentro da pasta "htdocs".
   - Abra a pasta do projeto no seu editor de preferência e abra o código "ScriptBanco"
   - Na tela do phpMyAdmin ![image](https://github.com/ryanmarques1/Desafio-Cientec---Ryan/assets/47296650/18ddfcf4-28eb-4b6f-9c44-5980b4457f33), clique em Novo e depois clique na aba SQL.
