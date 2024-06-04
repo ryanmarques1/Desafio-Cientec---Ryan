@@ -6,7 +6,7 @@
 #container{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
-#formulario{
+.formulario{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,6 +33,21 @@ button{
     transition: transform .5s;
 }
 button:hover{
+    transform: scale(.8);
+}
+
+#btnVoltar{
+    margin-top: 15px;
+    background-color: rgb(3, 16, 81);
+    color: rgb(194, 187, 187);
+    border-radius: 10px;
+    padding: 10;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform .5s;
+}
+#btnVoltar:hover{
     transform: scale(.8);
 }
 

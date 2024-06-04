@@ -69,7 +69,7 @@ $id = $id + 1;
     <!-- Form para pesquisa por NIS-->
     <form class = "formulario" method="post" action="pesquisa.php">
         <label for="nis_digitado">Digite o NIS para pesquisar: </label>
-        <input type="text" id="nis_digitado" name="nis_digitado">
+        <input type="text" id="nis_digitado" name="nis_digitado" required>
         <button type='submit'>Pesquisar Cidadão</button>
     </form>
 
