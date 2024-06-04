@@ -15,6 +15,9 @@ Para conseguir executar:
   - Abra a pasta do projeto no seu editor de preferência e abra o código "ScriptBanco"
   - Na tela do phpMyAdmin ![image](https://github.com/ryanmarques1/Desafio-Cientec---Ryan/assets/47296650/18ddfcf4-28eb-4b6f-9c44-5980b4457f33), clique em Novo e depois clique na aba SQL.
   - Copie o código do ScriptBanco, cole e clique em continuar. ![image](https://github.com/ryanmarques1/Desafio-Cientec---Ryan/assets/47296650/52c86b7e-e0ce-4d74-a83b-99d221fc3d55)
+  - Deve ficar assim:
+    ![image](https://github.com/ryanmarques1/Desafio-Cientec---Ryan/assets/47296650/a54ba0d6-6d1b-435e-8c3a-ff8ceb2a3b47)
+
   - Abra o localhost no seu navegador e acesse a pasta do projeto.
   - Realize os testes.
 
