@@ -1,6 +1,7 @@
 # Desafio-Cientec---Ryan
 
 Para conseguir executar:
+
 1º: 
   - Baixe o xammp: https://www.apachefriends.org/pt_br/download.html
   - Deixe as configurações padrões (Servidor: localhost, username: root, pssws: '')
