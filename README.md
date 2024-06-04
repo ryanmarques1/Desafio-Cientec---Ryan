@@ -19,4 +19,4 @@ Para conseguir executar:
   - Realize os testes.
 
 
-OBS: Se caso o localhost ir para a dashboard, digite: "localhost/NomeDaPastaDoProjeto"
+OBS: Se caso o localhost ir para a dashboard, digite no seu navegador: "localhost/NomeDaPastaDoProjeto"
